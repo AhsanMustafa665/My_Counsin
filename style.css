@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    font-family: 'Raleway', sans-serif;
+    /* overflow: hidden; */
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.banner{
+    display: flex;
+    height: 100vh;
+    color:white;
+    flex-wrap: wrap;
+}
+.banner-left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.banner-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.banner-right img{
+    width: 320px;
+    height: 320px;
+}
+.banner-title{
+    font-size: 50px;
+    white-space: nowrap;
+    color: transparent;
+    position: relative;
+}
+.banner-title::before{
+    content: 'My Cousin Is Here';
+    color: #22badd;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: typing 3s linear infinite;
+}
+.banner-text{
+    line-height: 2;
+    margin: 20px 0;
+}
+.love-button{
+    /* outline: 0; */
+    font-size: 18px;
+    padding: 10px 30px;
+    background-color: #22badd;
+    border: 4px solid #22bedd;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+.love-button:hover{
+    background-color: transparent;
+    border: 4px solid #22badd;
+}
+@keyframes typing {
+    0%{
+        content: 'M|';
+    }
+    
+    4%{
+        content: 'My|';
+    }
+    
+    8%{
+        content: 'My |';
+    }
+    
+    12%{
+        content: 'My C|';
+    }
+    
+    16%{
+        content: 'My Co|';
+    }
+    
+    20%{
+        content: 'My Cou|';
+    }
+    
+    24%{
+        content: 'My Cous|';
+    }
+    
+    28%{
+        content: 'My Cousi|';
+    }
+    
+    32%{
+        content: 'My Cousin|';
+    }
+    
+    36%{
+        content: 'My Cousin |';
+    }
+    
+    40%{
+        content: 'My Cousin I|';
+    }
+    
+    44%{
+        content: 'My Cousin Is|';
+    }
+    
+    48%{
+        content: 'My Cousin Is |';
+    }
+    
+    52%{
+        content: 'My Cousin Is H|';
+    }
+    
+    56%{
+        content: 'My Cousin Is He|';
+    }
+    
+    60%{
+        content: 'My Cousin Is Her|';
+    }
+    
+    64%{
+        content: 'My Cousin Is Here|';
+    }
+    64%,
+    83%{
+        content: 'My Cousin Is Here|';
+    }
+    
+    84%{
+        content: 'My Cousin Is Her|';
+    }
+    
+    85%{
+        content: 'My Cousin Is He|';
+    }
+    
+    86%{
+        content: 'My Cousin Is H|';
+    }
+    
+    87%{
+        content: 'My Cousin Is |';
+    }
+    
+    88%{
+        content: 'My Cousin Is|';
+    }
+    
+    89%{
+        content: 'My Cousin I|';
+    }
+    
+    90%{
+        content: 'My Cousin |';
+    }
+    
+    91%{
+        content: 'My Cousin|';
+    }
+    
+    92%{
+        content: 'My Cousi|';
+    }
+    
+    93%{
+        content: 'My Cous|';
+    }
+    
+    94%{
+        content: 'My Cou|';
+    }
+    
+    95%{
+        content: 'My Co|';
+    }
+    
+    96%{
+        content: 'My C';
+    }
+    
+    97%{
+        content: 'My|';
+    }
+    98%{
+        content: 'M|';
+    }
+    99%{
+        content: '|';
+    }
+}
+
+.gallery-title{
+    text-align: center;
+}
+.gallery-title h1{
+    color: #22bedd;
+    font-size: 40px;
+    margin: 50px 0;
+    border-left: 3px solid #22bedd;
+    border-right: 3px solid #22bedd;
+    display: inline-block;
+    padding:0 10px;
+    line-height: .8;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.photo{
+    height: 250px;
+    width: 250px;
+    position: relative;
+    overflow: hidden;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.border{
+    background-color: #fff;
+    position: absolute;
+    transition: .7s ease-in-out;
+}
+.border.top, .border.bottom{
+    height: 4px;
+    width: 270px;
+}
+.border.left, .border.right{
+    height: 270px;
+    width: 4px;
+}
+.border.top{
+    top: 5px;
+    right: 100%;
+}
+.border.bottom{
+    bottom: 5px;
+    left: 100%;
+}
+.border.left{
+    left: 5px;
+    top: 100%;
+}
+.border.right{
+    right: 5px;
+    bottom: 100%;
+}
+.photo:hover .border.top{
+    right: 5px;
+}
+.photo:hover .border.bottom{
+    left: 5px;
+}
+.photo:hover .border.left{
+    top: 5px;
+}
+.photo:hover .border.right{
+    bottom: 5px;
+}
+.photo-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding-left: 30px;
+    bottom: 0;
+    left: 0;
+    transform: translateY(400px);
+    transition: .3s ease-out;
+}
+.photo:hover .photo-content{
+    transform: translateY(170px);
+}
+.photo::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: .3s linear;
+}
+.photo:hover::before{
+    opacity: 1;
+}
